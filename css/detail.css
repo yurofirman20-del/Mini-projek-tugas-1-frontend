@@ -1,0 +1,197 @@
+/* ============================================================
+   Destination Detail Page Styles (detail.css)
+   ============================================================ */
+
+.detail-page-wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--surface-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.back-btn:hover {
+  background-color: #f1f5f9;
+  color: var(--text-main);
+  transform: translateX(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Detail Card Container */
+.detail-card {
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* Desktop Two-Column Layout */
+  gap: 0;
+}
+
+/* Detail Image Container */
+.detail-image-container {
+  position: relative;
+  width: 100%;
+  min-height: 440px;
+  background-color: #e2e8f0;
+}
+
+.detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Detail Content Container */
+.detail-content-container {
+  padding: 2.5rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-location {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.detail-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Ticket Price Box */
+.detail-price-box {
+  background: linear-gradient(135deg, #f0fdf4, #e6fffa);
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.price-label {
+  font-size: 0.925rem;
+  color: #166534;
+  font-weight: 600;
+}
+
+.price-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #15803d;
+}
+
+/* Description Section */
+.detail-section {
+  margin-bottom: 2rem;
+}
+
+.section-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.detail-description {
+  color: #334155;
+  font-size: 1.025rem;
+  line-height: 1.7;
+}
+
+/* Highlights */
+.detail-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #f8fafc;
+  padding: 0.75rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #f1f5f9;
+}
+
+.highlight-icon {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.highlight-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* Responsive Detail Layout */
+
+/* Mobile & Tablet (< 768px): Stacked Layout */
+@media (max-width: 860px) {
+  .detail-card {
+    grid-template-columns: 1fr; /* Stacked layout */
+  }
+
+  .detail-image-container {
+    min-height: 280px;
+    max-height: 360px;
+  }
+
+  .detail-content-container {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .detail-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .detail-price-box {
+    padding: 0.85rem 1rem;
+  }
+
+  .price-value {
+    font-size: 1.2rem;
+  }
+
+  .detail-highlights {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+}
+

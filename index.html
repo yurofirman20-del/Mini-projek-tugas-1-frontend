@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinasi Wisata Indonesia - Eksplorasi Keindahan Nusantara</title>
+  <meta name="description" content="Website informasi destinasi wisata Indonesia dengan data terlengkap dan akurat.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏝️</text></svg>">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/list.css">
+  <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#/" class="site-logo">
+        <span class="logo-badge">ID</span>
+        <span>PesonaWisata</span>
+      </a>
+      <span class="header-tagline">Temukan Petualangan Terbaikmu</span>
+    </div>
+  </header>
+
+  <!-- SPA Container -->
+  <main id="app" role="main">
+    <!-- Dynamic view will be rendered here by JavaScript -->
+    <noscript>
+      <div style="text-align: center; padding: 3rem;">
+        <h2>JavaScript Dibutuhkan</h2>
+        <p>Silakan aktifkan JavaScript di browser Anda untuk menggunakan aplikasi ini.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <!-- Fallback guidance if opened directly as file:/// -->
+  <script>
+    if (window.location.protocol === 'file:') {
+      window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const app = document.getElementById('app');
+          if (app && (!app.children.length || app.querySelector('noscript'))) {
+            app.innerHTML = `
+              <div style="max-width: 650px; margin: 3rem auto; padding: 2rem; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); text-align: center; font-family: system-ui, sans-serif;">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">🚀</div>
+                <h2 style="color: #0f172a; margin-bottom: 0.75rem; font-size: 1.5rem;">Aplikasi Membutuhkan Server Lokal</h2>
+                <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">
+                  Halaman ini dibuka langsung lewat <code>file:///</code>. Karena aplikasi menggunakan arsitektur modern (JavaScript Modules & REST API), browser memblokir request lokal untuk alasan keamanan (CORS).
+                </p>
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.25rem; border-radius: 12px; text-align: left; font-size: 0.95rem; margin-bottom: 1.5rem;">
+                  <strong style="color: #0f172a; display: block; margin-bottom: 0.5rem;">Pilih salah satu cara mudah untuk membukanya:</strong>
+                  <ol style="margin-left: 1.25rem; color: #334155; line-height: 1.8;">
+                    <li><strong>Klik ganda file <code>start.bat</code></strong> di dalam folder project (otomatis membuka browser).</li>
+                    <li>Atau di terminal jalankan: <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">node ../backend/server.js</code></li>
+                  </ol>
+                </div>
+                <p style="color: #0d9488; font-weight: 600;">Lalu buka: <a href="http://localhost:3000" style="color: #0d9488; text-decoration: underline;">http://localhost:3000</a></p>
+              </div>
+            `;
+          }
+        }, 300);
+      });
+    }
+  </script>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 PesonaWisata Indonesia. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <!-- Application Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+
